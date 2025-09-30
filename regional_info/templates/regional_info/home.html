@@ -1,0 +1,11 @@
+<ul>
+  {% for region in all_regions %}
+
+  <h1>Region name: {{ region.name }}</h1>
+  <h1>Population size: {{region.population_size}}</h1>
+  <h1>capital_city: {{region.capital_city}}</h1>
+  <h1>Email address: {{region.email_address}}</h1>
+  {% empty %}
+  <li>No regions available.</li>
+  {% endfor %}
+</ul>
