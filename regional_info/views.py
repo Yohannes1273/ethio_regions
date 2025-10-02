@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from . models import RegionalInfo
 from .forms import RegionalInfoForm
 # Create your views here.
@@ -11,8 +11,17 @@ def home(request):
 
 
 def create_region(request):
-    form=RegionalInfoForm()
-    context={'form':form}
-    return render(request,'regional_info/create_region.html',context=context)
+    if request.method=="POST":
+        form=RegionalInfoForm(request.POST,request.FILES)
+        context={'form':form}
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+        else:
+            return render(request,'regional_info/create_region.html',context=context)
+    else:
+        form = RegionalInfoForm()
+        context={'form':form}
+        return render(request,'regional_info/create_region.html',context=context)
 
     

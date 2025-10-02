@@ -9,9 +9,9 @@
     {%block title%}
 
 
-{% endblock title%}
+    {% endblock title%}
     <link href=" {%static 'assets/css/bootstrap.min.css ' %}" rel="stylesheet">
-   
+
 
 <body>
     <nav class="navbar navbar-expand-lg  navbar-dark bg-primary">
@@ -19,13 +19,13 @@
             <a class="navbar-brand" href="#">Ethiopia's Region Management System</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"> 
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Add Region</a>
+                        <a class="nav-link active" aria-current="page" href=" {% url 'create_regions' %}">Add Region</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Login</a>
@@ -36,7 +36,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">SignUp</a>
                     </li>
-                    
+
                 </ul>
 
             </div>
@@ -45,10 +45,10 @@
 
 
 
-{%block content%}
+    {%block content%}
 
 
-{% endblock content%}
+    {% endblock content%}
 
     <script src=" {% static 'assets/js/bootstrap.bundle.min.js'%}"></script>
 </body>

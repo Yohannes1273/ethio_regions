@@ -1,7 +1,11 @@
-{% extends 'base.html' %} {% block title %} Create Region {% endblock title %}
+{% extends 'base.html' %} {% block title %} {% endblock title %}
 {% block content %}
-<form method="post" enctype="multipart/form-data">
-  {% csrf_token %} {{ form.as_p }}
-  <input type="submit" value="Create Region" class="btn btn-primary" />
-</form>
+
+<div class="container container-fluid col-lg-6 border-5 ">
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="Create Region" class="btn btn-primary" />
+  </form>
+</div>
 {% endblock content %}
