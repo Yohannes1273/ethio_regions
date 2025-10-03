@@ -1,11 +1,11 @@
-{% extends 'base.html' %} {% block title %} {% endblock title %}
+{% extends 'base.html' %} {% block title %} Update Region {% endblock title %}
 {% block content %}
-
-<div class="container container-fluid col-lg-6 border-5 ">
-
+<div class="container my-5 col-lg-6 border p-4 shadow rounded">
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %} {{ form.as_p }}
-    <input type="submit" value="Create Region" class="btn btn-primary" />
+    <div class="text-center">
+      <input type="submit" value="Save" class="btn btn-primary px-4" />
+    </div>
   </form>
 </div>
 {% endblock content %}
